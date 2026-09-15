@@ -11,7 +11,7 @@
 
 **Méthode :** analyse préalable sous les quatre dimensions de la gestion des produits et services (*ITIL Four Dimensions of Product and Service Management*), avant toute proposition d'outil ou de correctif technique. L'objectif de cette étape est de remonter des symptômes vers leurs causes, et non de traiter les symptômes.
 
-**Convention de lecture :** chaque constat est formulé à partir d'un symptôme observable, puis assorti d'une **mesure de confirmation** — la donnée à extraire de l'outil de ticketing pour valider ou invalider le constat. Un constat non encore mesuré est identifié comme tel ; il ne doit pas être présenté comme un fait établi devant le commanditaire.
+**Convention de lecture :** chaque constat part d'un symptôme observable et s'accompagne d'une **mesure de confirmation**, c'est-à-dire la donnée à extraire de l'outil de ticketing pour valider le constat puis suivre son évolution après correction.
 
 ---
 
