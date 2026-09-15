@@ -109,7 +109,7 @@ Uniquement en cas d'atteinte à l'intégrité des données. Mettre l'application
 
 « Je demande l'autorisation de déployer le modèle de qualification décrit dans la RFC-2026-014, issu du diagnostic mené sur le helpdesk.
 
-Le problème que je traite est mesuré, pas ressenti : sur les trois derniers mois, une part significative des tickets n'a été assignée à aucun technicien dans les 4 heures suivant leur création, et la priorité de traitement est aujourd'hui l'ordre d'arrivée. Concrètement, une panne bloquant une équipe entière attend derrière une demande individuelle de confort. C'est ce que les utilisateurs appellent lenteur et tickets perdus.
+Le problème que je traite part de trois symptômes remontés de façon récurrente par les utilisateurs, et d'un fonctionnement vérifiable dans l'outil : les tickets ne sont pas attribués nominativement à leur création, et la priorité de traitement est de fait l'ordre d'arrivée. Les mesures de confirmation définies dans le diagnostic serviront de point de référence avant et après le changement. Concrètement, une panne bloquant une équipe entière attend derrière une demande individuelle de confort. C'est ce que les utilisateurs appellent lenteur et tickets perdus.
 
 Le changement porte uniquement sur de la configuration de l'outil déjà en place. Il n'y a ni achat, ni développement, ni changement de version, ni interruption de service prévue. Je le propose en changement normal et non standard, parce qu'il est inédit et que je ne dispose d'aucun historique de risque pour le pré-approuver.
 
