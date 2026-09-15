@@ -17,8 +17,10 @@ Ces éléments conditionnent la mesure ; sans eux, un engagement de délai n'est
 **Point de départ du chronomètre :** horodatage de création du ticket dans l'outil, quel que soit le canal d'origine.
 
 **Suspensions du compteur (pauses SLA), à tracer explicitement dans le ticket :**
-- statut « En attente utilisateur » (information ou disponibilité manquante côté demandeur) ;
-- statut « En attente tiers » (éditeur, opérateur, prestataire) — cette exclusion est celle qui rend l'engagement tenable, le helpdesk ne pouvant s'engager sur un délai qu'il ne maîtrise pas. Elle ne dispense pas de suivre ces tickets : ils font l'objet d'une revue hebdomadaire dédiée.
+- attente utilisateur (information ou disponibilité manquante côté demandeur) ;
+- attente tiers (éditeur, opérateur, prestataire) — cette exclusion est celle qui rend l'engagement tenable, le helpdesk ne pouvant s'engager sur un délai qu'il ne maîtrise pas. Elle ne dispense pas de suivre ces tickets : ils font l'objet d'une revue hebdomadaire dédiée.
+
+Dans GLPI, un seul statut « En attente » suspend le calcul des SLA. Le motif (utilisateur ou tiers) est donc systématiquement précisé dans un suivi au moment de la mise en attente, ce qui permet de distinguer les deux cas lors de la revue.
 
 **Fréquence de revue :** rapport mensuel des SLO, revue trimestrielle des SLA avec le représentant métier.
 
