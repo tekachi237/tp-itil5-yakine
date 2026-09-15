@@ -24,7 +24,7 @@ Analyse et amélioration d'un service de support interne présentant trois sympt
 |---|---|
 | **Numéro** | #2026-0912 |
 | **Titre** | Création du groupe Helpdesk-N1 et rattachement des techniciens support |
-| **Type** | Demande |
+| **Type** | Demande *(et non Incident)* |
 | **Catégorie** | Outillage interne > Ticketing |
 | **Demandeur** | Technicien support, équipe helpdesk |
 | **Attribué à** | Groupe Administration GLPI |
@@ -48,7 +48,7 @@ La RFC-2026-014, approuvée en CAB le 17/09/2026, prévoit une règle de repli a
 **Pourquoi il s'agit d'une demande de service et non d'un incident.**
 Rien n'est en panne. Aucun service ne fonctionne en mode dégradé, aucun utilisateur n'est empêché de travailler. La demande porte sur la mise à disposition d'un élément prévu, planifié et attendu — la création d'un groupe dans l'outil — dans le cadre d'un changement approuvé. Elle relève donc de **Service Request Management** : traitement selon un flux standardisé et prévisible, avec un délai négocié à l'avance, et non selon la logique de rétablissement au plus vite propre à **Incident Management**.
 
-Cette distinction a une conséquence de pilotage directe, et c'est la raison pour laquelle elle est explicitée ici : agréger demandes et incidents dans les mêmes statistiques rend le délai moyen de traitement ininterprétable. Les demandes de service, plus nombreuses et souvent plus rapides, masquent les incidents longs. C'est l'une des causes du symptôme « lenteur » relevé en Partie 1 — non parce que le service est lent partout, mais parce que personne ne savait où il l'était.
+Cette distinction a une conséquence de pilotage directe : agréger demandes et incidents dans les mêmes statistiques rend le délai moyen de traitement ininterprétable. Les demandes de service, plus nombreuses et souvent plus rapides, masquent les incidents longs. C'est l'une des causes du symptôme « lenteur » relevé en Partie 1 — non parce que le service est lent partout, mais parce que personne ne savait où il l'était.
 
 ---
 
@@ -86,7 +86,7 @@ Le même arbitrage revient ailleurs :
 
 Le module **ITIL AI Governance** est le module d'extension de la Version 5. Il structure la gouvernance de l'IA selon quatre perspectives — autorité de décision et gestion du risque, principes éthiques et IA responsable, gouvernance des données et gestion de la performance, conformité réglementaire et standards opérationnels — et fournit le **ITIL AI Capability Model**, dit modèle **6C**, qui classe les capacités d'une solution d'IA en six fonctions : *Creation, Curation, Clarification, Cognition, Communication, Coordination*. Ce modèle sert à cadrer les contrôles et le profil de risque en fonction de ce que l'IA fait réellement, et non de l'étiquette commerciale du produit.
 
-### 4.1 La conclusion honnête : non pertinent à ce stade du cas
+### 4.1 Non pertinent à ce stade du cas
 
 Aucune des améliorations retenues ne mobilise d'IA, et c'est un choix argumenté, pas un oubli.
 
@@ -107,4 +107,4 @@ Trois contrôles applicables immédiatement, sans outillage supplémentaire :
 
 ### 4.3 Ce que le module n'apporte pas ici
 
-Sur les trois quarts du cas — les quatre dimensions, les SLA et SLO, la RFC, le CAB, le retour arrière — le module d'extension n'apporte rien, et il serait malhonnête de le convoquer. Ces parties reposent sur des pratiques stables du référentiel. L'apport réel d'AI Governance sur ce TP se réduit à deux points précis : un **critère d'exclusion argumenté** pour une automatisation qui semblait séduisante, et un **cadre pour un usage de l'IA déjà en place mais jamais formalisé**. C'est peu, mais c'est exactement ce que le module est censé produire : une décision documentée sur un périmètre délimité, plutôt qu'une couche d'IA ajoutée parce qu'elle est disponible.
+Sur les trois quarts du cas — les quatre dimensions, les SLA et SLO, la RFC, le CAB, le retour arrière — le module d'extension n'apporte rien, et le mobiliser serait artificiel. Ces parties reposent sur des pratiques stables du référentiel. L'apport réel d'AI Governance sur ce TP se réduit à deux points précis : un **critère d'exclusion argumenté** pour une automatisation qui semblait séduisante, et un **cadre pour un usage de l'IA déjà en place mais jamais formalisé**. C'est peu, mais c'est exactement ce que le module est censé produire : une décision documentée sur un périmètre délimité, plutôt qu'une couche d'IA ajoutée parce qu'elle est disponible.
