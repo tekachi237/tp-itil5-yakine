@@ -59,7 +59,9 @@ Conséquence : un ticket en attente d'un tiers reste ouvert sans mise à jour vi
 
 ## 2. CSI Register (Continual Service Improvement Register)
 
-Registre des améliorations identifiées à l'issue du diagnostic. Statut initial : `Identifiée` pour les trois entrées.
+Registre des améliorations identifiées à l'issue du diagnostic.
+
+**Statut au 15/09/2026 :** CSI-01 `En cours` (RFC-2026-014 approuvée en CAB le 10/09/2026, déploiement le 16/09/2026) ; CSI-02 et CSI-03 `Identifiée`.
 
 | ID | Amélioration | Dimension(s) visée(s) | Symptômes traités | Effort | Impact | Priorité |
 |----|--------------|----------------------|-------------------|--------|--------|----------|
