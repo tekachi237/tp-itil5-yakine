@@ -24,7 +24,7 @@ Analyse et amélioration d'un service de support interne présentant trois sympt
 |---|---|
 | **Numéro** | #2026-0912 |
 | **Titre** | Création du groupe Helpdesk-N1 et rattachement des techniciens support |
-| **Type** | Demande *(et non Incident)* |
+| **Type** | Demande |
 | **Catégorie** | Outillage interne > Ticketing |
 | **Demandeur** | Technicien support, équipe helpdesk |
 | **Attribué à** | Groupe Administration GLPI |
