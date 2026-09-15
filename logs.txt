@@ -1,0 +1,5 @@
+[2026-09-10 08:12:03] AUTH user=jdupont action=login status=success host=WKS-042
+[2026-09-10 09:45:17] DISK host=SRV-FILE01 usage=82% threshold=80%
+[2026-09-10 11:03:55] SVC name=helpdesk-portal status=unreachable duration=00:04:12
+[2026-09-10 14:20:41] BACKUP job=nightly-backup host=SRV-DB01 status=completed size=45GB
+[2026-09-10 16:58:29] NET link=switch-3F-port12 status=down flapping=true count=6/10min
