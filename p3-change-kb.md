@@ -13,8 +13,8 @@
 | Amélioration d'origine | CSI-01 du CSI Register (Partie 1) |
 | Demandeur | Technicien réseau / support, équipe helpdesk interne |
 | Approbateur sollicité | Responsable IT, en formation CAB avec le représentant métier |
-| Date de soumission | 15/09/2026 |
-| Fenêtre de déploiement demandée | Mercredi 23/09/2026, 12h00 – 14h00 |
+| Date de soumission | 08/09/2026 |
+| Fenêtre de déploiement demandée | Mercredi 16/09/2026, 12h00 – 14h00 |
 | Type de changement | **Normal** |
 
 ### 1.2 Description du changement
@@ -103,7 +103,7 @@ Uniquement en cas d'atteinte à l'intégrité des données. Mettre l'application
 
 ## 2. Simulation de validation en CAB
 
-**Séance :** CAB hebdomadaire du 17/09/2026. **Objet :** RFC-2026-014. **Présents :** responsable IT (président), représentant métier (services généraux), technicien demandeur, référent système.
+**Séance :** CAB hebdomadaire du 10/09/2026. **Objet :** RFC-2026-014. **Présents :** responsable IT (président), représentant métier (services généraux), technicien demandeur, référent système.
 
 ### 2.1 Position du demandeur
 
@@ -123,9 +123,9 @@ Enfin, c'est le premier des trois incréments inscrits au CSI Register. Les deux
 
 **Première objection — le risque le plus coûteux n'est pas celui que vous mettez en avant.** Vous insistez sur le mauvais routage, qui est rattrapable par une ré-attribution manuelle. Ce qui m'inquiète est R2 : si un champ obligatoire empêche un utilisateur de déposer sa demande, il ne nous le signale pas, il téléphone ou il renonce. Nous aurions alors dégradé le service en croyant l'améliorer, et nous ne le verrions pas dans nos statistiques — nous verrions même une baisse du volume de tickets, que quelqu'un pourrait interpréter comme un succès. **Condition 1 : aucun champ obligatoire supplémentaire côté formulaire utilisateur. La qualification est un acte technicien, point.**
 
-**Deuxième objection — la fenêtre.** Mercredi 12h00 est l'heure à laquelle les utilisateurs signalent ce qu'ils ont constaté le matin. Je ne veux pas d'un changement pendant que le flux entrant est actif. **Condition 2 : déploiement mercredi 23/09 entre 12h30 et 14h00, avec un technicien maintenu sur la ligne téléphonique et la consigne de créer manuellement tout ticket reçu pendant l'intervention.**
+**Deuxième objection — la fenêtre.** Mercredi 12h00 est l'heure à laquelle les utilisateurs signalent ce qu'ils ont constaté le matin. Je ne veux pas d'un changement pendant que le flux entrant est actif. **Condition 2 : déploiement mercredi 16/09 entre 12h30 et 14h00, avec un technicien maintenu sur la ligne téléphonique et la consigne de créer manuellement tout ticket reçu pendant l'intervention.**
 
-**Troisième objection — vous engagez toute l'équipe sur un changement d'habitude sans étape de vérification.** Vos vingt tickets de test en recette valident la mécanique, pas l'usage. **Condition 3 : période probatoire de 10 jours ouvrés avec revue quotidienne des tickets mal routés, et bilan chiffré présenté au CAB du 07/10. Deux indicateurs : part des tickets assignés sous 1 h, et nombre de ré-attributions manuelles. Si les ré-attributions dépassent 15 % du volume, on révise l'arbre de catégories, ce qui est une correction — on ne revient pas en arrière.**
+**Troisième objection — vous engagez toute l'équipe sur un changement d'habitude sans étape de vérification.** Vos vingt tickets de test en recette valident la mécanique, pas l'usage. **Condition 3 : période probatoire de 10 jours ouvrés avec revue quotidienne des tickets mal routés, et bilan chiffré présenté au CAB du 01/10. Deux indicateurs : part des tickets assignés sous 1 h, et nombre de ré-attributions manuelles. Si les ré-attributions dépassent 15 % du volume, on révise l'arbre de catégories, ce qui est une correction — on ne revient pas en arrière.**
 
 Sur le fond, la démarche est saine : vous corrigez un défaut de processus par de la configuration, vous ne demandez pas de budget, et votre retour arrière tient en cinq minutes sans intervention en base. C'est exactement le profil de risque que ce comité peut accepter.
 
@@ -135,7 +135,7 @@ Sur le fond, la démarche est saine : vous corrigez un défaut de processus par 
 
 ## 3. Article de base de connaissance
 
-> Article KB-047 — Créé le 15/09/2026 — Applicable à partir du 23/09/2026 (mise en production de RFC-2026-014) — Public : techniciens helpdesk N1 et N2 — Prochaine revue : 23/03/2027
+> Article KB-047 — Créé le 08/09/2026 — Applicable à partir du 16/09/2026 (mise en production de RFC-2026-014) — Public : techniciens helpdesk N1 et N2 — Prochaine revue : 16/03/2027
 
 ### Symptôme
 
@@ -188,7 +188,7 @@ Le modèle en huit activités du *ITIL Product and Service Lifecycle* — Discov
 
 **Build — activité principale.** Le changement consiste à construire la configuration cible : arbre de catégories, gabarit de ticket, règles métier d'attribution, calcul automatique de la priorité. La recette décrite en 1.5, avec ses vingt tickets de test, appartient à cette activité : on vérifie que ce qui a été construit se comporte comme prévu, avant toute exposition aux utilisateurs.
 
-**Transition — activité principale.** Tout ce qui fait passer la configuration validée vers l'environnement réel : la fenêtre du 23/09, la communication aux utilisateurs à J-3, le briefing des techniciens, les tickets de contrôle en production, le plan de retour arrière et la période probatoire de 10 jours imposée par le CAB. C'est l'activité dans laquelle se joue le risque effectif du changement.
+**Transition — activité principale.** Tout ce qui fait passer la configuration validée vers l'environnement réel : la fenêtre du 16/09, la communication aux utilisateurs à J-3, le briefing des techniciens, les tickets de contrôle en production, le plan de retour arrière et la période probatoire de 10 jours imposée par le CAB. C'est l'activité dans laquelle se joue le risque effectif du changement.
 
 **Design — activité partiellement mobilisée.** Le changement n'est pas un simple ajustement de paramètres : il redéfinit le flux de traitement d'un ticket. L'introduction d'un point de qualification obligatoire, le passage d'une priorité déclarée par l'utilisateur à une priorité calculée par matrice, et la distinction explicite entre incident et demande de service sont des décisions de conception du service, antérieures à toute écriture de règle. C'est également en Design qu'a été tranché le choix structurant relevé par le CAB : la qualification est un acte technicien, pas une charge déportée sur l'utilisateur.
 
