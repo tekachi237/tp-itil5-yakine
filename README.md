@@ -18,32 +18,34 @@ Analyse et amélioration d'un service de support interne présentant trois sympt
 
 ## 1. Demande de service traitée (Service Request Management)
 
-> ⚠️ **À compléter depuis l'instance GLPI.** Les champs ci-dessous décrivent la demande telle qu'elle doit être créée et traitée ; le numéro de ticket, les horodatages exacts et les noms d'utilisateurs sont à remplacer par les valeurs réelles relevées dans GLPI après traitement.
+Demande traitée dans l'instance GLPI de travail (entité racine). Les champs ci-dessous sont recopiés depuis le ticket et son historique ; les horodatages sont ceux affichés par GLPI.
 
 | Champ | Valeur |
 |---|---|
-| **Numéro** | #2026-0912 |
+| **Numéro** | 4 |
 | **Titre** | Création du groupe Helpdesk-N1 et rattachement des techniciens support |
 | **Type** | Demande *(et non Incident)* |
 | **Catégorie** | Outillage interne > Ticketing |
-| **Demandeur** | Technicien support, équipe helpdesk |
-| **Attribué à** | Groupe Administration GLPI |
-| **Priorité** | Moyenne (impact limité × urgence moyenne) |
+| **Source de la demande** | Helpdesk |
+| **Demandeur** | tech |
+| **Attribué à** | glpi (technicien) ; groupe Helpdesk-N1 |
+| **Urgence / Impact / Priorité** | Moyenne / Moyen / Moyenne |
 | **Statut** | Clos |
-| **Date d'ouverture** | 18/09/2026 09:12 |
-| **Date de prise en charge** | 18/09/2026 10:40 |
-| **Date de résolution** | 18/09/2026 15:05 |
-| **Date de clôture** | 19/09/2026 08:30 (après confirmation du demandeur) |
+| **Date d'ouverture** | 2026-09-15 07:47:01 |
+| **Délai de prise en compte** | 1 seconde (technicien attribué dès la création) |
+| **Date de résolution** | 2026-09-15 07:50:54 |
+| **Date de clôture** | 2026-09-15 07:51:10 |
 | **Changement associé** | RFC-2026-014 |
 
-**Description (champ Description du ticket).**
-La RFC-2026-014, approuvée en CAB le 17/09/2026, prévoit une règle de repli affectant à Helpdesk-N1 tout ticket qu'aucune règle d'attribution ne capte. Ce groupe n'existe pas encore dans l'outil. Demande de création du groupe `Helpdesk-N1`, de rattachement des trois techniciens support, et d'attribution du droit de visualisation et de prise en charge des tickets du groupe. Échéance impérative : avant le 23/09/2026 12h00, fenêtre de déploiement de la RFC.
+**Description.**
+La RFC-2026-014, approuvée en CAB le 10/09/2026, prévoit une règle de repli (RM-99) affectant au groupe Helpdesk-N1 tout ticket qu'aucune règle d'attribution ne capte. Demande : création du groupe Helpdesk-N1 dans GLPI, rattachement des comptes techniciens du support et activation de la visibilité du groupe pour l'attribution des tickets. Échéance : avant le 16/09/2026 12h30, début de la fenêtre de déploiement de la RFC.
 
-**Suivis (extraits).**
-- 18/09 10:40 — Prise en charge. Vérification de l'absence d'un groupe équivalent sous un autre libellé.
-- 18/09 14:20 — Groupe créé, trois techniciens rattachés, profil « Technicien » appliqué.
-- 18/09 15:05 — Test de vérification : création d'un ticket assigné manuellement au groupe, visible dans la vue des trois comptes. Demande de confirmation adressée au demandeur.
-- 19/09 08:30 — Confirmation reçue du demandeur, clôture.
+**Suivis, solution et clôture.**
+- 2026-09-15 07:47 — *Suivi.* Prise en charge par l'administration GLPI. Vérification préalable : un groupe Helpdesk-N1 (ID 1) a déjà été initialisé lors de la préparation de la RFC avec le seul compte tech ; aucun autre groupe équivalent sous un autre libellé. Reste à faire : rattacher le compte glpi, vérifier la visibilité du groupe en attribution, tester.
+- 2026-09-15 07:49 — *Modification du ticket.* Groupe Helpdesk-N1 ajouté en groupe attribué, pour tester sa visibilité dans les acteurs.
+- 2026-09-15 07:50 — *Suivi.* Compte glpi rattaché au groupe Helpdesk-N1 : le groupe contient désormais les comptes glpi et tech. Visibilité vérifiée : paramètre « Attribué à = Oui » actif, et test réalisé sur ce ticket, le groupe apparaît dans la liste des acteurs attribuables et a pu être ajouté en groupe attribué.
+- 2026-09-15 07:50 — *Solution (statut Résolu).* Groupe Helpdesk-N1 opérationnel dans GLPI : comptes glpi et tech rattachés, groupe visible et attribuable sur les tickets. La règle de repli RM-99 de la RFC-2026-014 peut cibler ce groupe lors du déploiement du 16/09/2026. Demande de confirmation adressée au demandeur.
+- 2026-09-15 07:51 — *Approbation de la solution (statut Clos).* Groupe vérifié dans la liste des acteurs attribuables, solution approuvée. Clôture enregistrée depuis le compte administrateur GLPI.
 
 **Pourquoi il s'agit d'une demande de service et non d'un incident.**
 Rien n'est en panne. Aucun service ne fonctionne en mode dégradé, aucun utilisateur n'est empêché de travailler. La demande porte sur la mise à disposition d'un élément prévu, planifié et attendu — la création d'un groupe dans l'outil — dans le cadre d'un changement approuvé. Elle relève donc de **Service Request Management** : traitement selon un flux standardisé et prévisible, avec un délai négocié à l'avance, et non selon la logique de rétablissement au plus vite propre à **Incident Management**.
